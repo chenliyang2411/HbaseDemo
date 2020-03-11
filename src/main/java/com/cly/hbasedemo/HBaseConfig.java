@@ -21,9 +21,9 @@ public class HBaseConfig {
     @Bean("conf")
     public org.apache.hadoop.conf.Configuration configuration() {
         org.apache.hadoop.conf.Configuration conf = new org.apache.hadoop.conf.Configuration();
-        conf.set("hbase.config.hbase.zookeeper.quorum", zookeeperQuorum);
-        conf.set("hbase.config.hbase.zookeeper.property.clientPort", clientPort);
-        conf.set("zookeeper.znode.parent", znodeParent);
+        conf.set("hbase.zookeeper.quorum", zookeeperQuorum);
+        conf.set("hbase.zookeeper.property.clientPort", clientPort);
+        //conf.set("zookeeper.znode.parent", znodeParent);
         return conf;
     }
 
